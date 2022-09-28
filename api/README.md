@@ -1,6 +1,6 @@
 # Introdução
 API REST para calcular a relação entre os lados de um triângulo retângulo pelo teorema de Pitágoras.
-<img src="https://ogimg.infoglobo.com.br/in/25393836-124-152/FT1086A/760/teorema-de-pitagoras-png-1.png" alt="Teorema de Pitágoras" style="width:300px;display: block;margin-left: auto;margin-right: auto;"/>
+<img src="teorema-de-pitagoras-png-1.png" alt="Teorema de Pitágoras" style="width:300px;display: block;margin-left: auto;margin-right: auto;"/>
 
 ## Cálculo
 
