@@ -1,4 +1,3 @@
-from multiprocessing.sharedctypes import Value
 from flask import Flask, request, jsonify
 import math
  
@@ -17,13 +16,13 @@ def calcular():
             response = jsonify({"a":str(round(a,int(precisao)))})            
         elif not b and a and c:
             if float(a) < float(c):
-                response = jsonify({"error": "A hipotenusa não pode ser maior que os catetos"})
+                response = jsonify({"error": "A hipotenusa não pode ser menor que os catetos"})
             else:
                 b = math.sqrt(float(a) ** 2 - float(c) ** 2)
                 response = jsonify({"b":str(round(b,int(precisao)))})                
         elif not c and a and b:
             if float(a) < float(b):
-                response = jsonify({"error": "A hipotenusa não pode ser maior que os catetos"})
+                response = jsonify({"error": "A hipotenusa não pode ser menor que os catetos"})
             else:
                 c = math.sqrt(float(a) ** 2 - float(b) ** 2)
                 response = jsonify({"c":str(round(c,int(precisao)))})                
