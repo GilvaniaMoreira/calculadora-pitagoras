@@ -2,7 +2,7 @@
 API REST para calcular a relação entre os lados de um triângulo retângulo pelo teorema de Pitágoras.
 <img src="teorema-de-pitagoras-png-1.png" alt="Teorema de Pitágoras" style="width:300px;display: block;margin-left: auto;margin-right: auto;"/>
 
-## Cálculo
+## Requisições
 
 ```http
 POST /calcular
@@ -10,9 +10,9 @@ POST /calcular
 
 | Parâmetro | Tipo | Descrição |
 | :--- | :--- | :--- |
-| `a` | `int` | Lado a do triângulo |
-| `b` | `int` | Lado b do triângulo |
-| `c` | `int` | Lado c do triângulo |
+| `a` | `float` | Lado a do triângulo |
+| `b` | `float` | Lado b do triângulo |
+| `c` | `float` | Lado c do triângulo |
 | `precisao` | `int` | Número de casas decimais do resultado, padrão: 2 |
 
 **Devem ser passados apenas 2 dos valores de a, b ou c. Por exemplo se desejo calcular o valor de c deve-se passar como parâmetro apenas a e b.**
@@ -20,10 +20,13 @@ POST /calcular
 
 ## Resposta
 
-A API irá retornar o valor do lado desejado em formato de float com prescisão desejada
-Também será retornado os os códigos de status HTTP:
+A API irá retornar um JSON com os seguites campos: 
 
-| Status Code | Description |
-| :--- | :--- |
-| 200 | `OK` se a requisição foi bem sucedida |
-| 400 | `BAD REQUEST` se houve falha na requisição |
+| Parâmetro | Tipo | Descrição |
+| :--- | :--- | :--- |
+| `a` | `float` | Resultado do calculo da hipotenusa |
+| `b` | `float` | Resultado do calculo do 1º cateto |
+| `c` | `float` | Resultado do calculo do 2º cateto |
+| `error` | `string` | Descrição de um erro caso ocorra |
+
+***Só será retorna um campo a cada requisição, correspondendo ao resultado desejado ou o error em caso de falha***
