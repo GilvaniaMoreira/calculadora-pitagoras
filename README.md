@@ -5,7 +5,7 @@ Este projeto foi desenvolvido para o desafio de calcular a relação dos lados d
 O desenvolvimento da interface da calculadora foi feito utilizando HTML5, CSS3, bootstrap e como linguagem de
 programação foi utilizado JavaScript para as funcionalidades.
 
-<img src="./frontend/images/index.png" alt="Teorema de Pitágoras" style="width:600px;display: block;margin-left: auto;margin-right: auto;"/><br>
+<img src="./frontend/images/index.png" alt="Teorema de Pitágoras" style="width:600px;display: block;margin-left: auto;margin-right: auto;aling-items: center;"/><br>
 
 Foi desenvolvido também uma API em python utilizando flask para realizar os calculos no backend.
 
