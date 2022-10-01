@@ -1,13 +1,15 @@
-nav {
-    height: 75px;
+html {
+    height: 100%;
+    min-height: 100%;
 }
 
-       
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    
+}
+
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 80px;    
-    text-align: center;
-    line-height: 100px;
+    margin-top: auto;
 }

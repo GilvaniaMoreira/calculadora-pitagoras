@@ -1,7 +1,12 @@
 from flask import Flask, request, jsonify
 import math
+import os
  
 app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return "<h1>Pythagoras Calculator API!</h1>"
 
 @app.route('/calcular', methods = ['POST'])
 def calcular():
@@ -37,6 +42,6 @@ def calcular():
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0",port=port)

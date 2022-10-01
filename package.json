@@ -1,0 +1,15 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Meu primeiro servidor",
+  "main": "frontend/servidor.js",
+  "scripts": {
+    "start": "node frontend/servidor.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gilvânia Moreira",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
