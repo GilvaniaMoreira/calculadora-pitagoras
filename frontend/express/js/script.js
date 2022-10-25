@@ -9,6 +9,25 @@ $(document).ready(function(){
 });
 
 
+/* Setando as opções do toastr */
+toastr.options = {
+  "closeButton": true,
+  "newestOnTop": false,
+  "progressBar": true,
+  "positionClass": "toast-top-center",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "100",
+  "hideDuration": "1000",
+  "timeOut": "3000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
+
+
 /* Função para requesitar os dados da api de calculo */
 function requisitaApi(){
   var a = $('input[name="a"]').val();
@@ -17,8 +36,9 @@ function requisitaApi(){
   $.post("https://pythagoras-calculator-api.herokuapp.com/calcular", {a:a, b:b, c:c}, function(result){
     $.each(result, function(key, value){
       console.log(key, value);
+      // alert
       if (key=="error"){
-        alert(value)
+        toastr.error(value);
       } else {
         $("#" + key).val(value);
         $("#" + key).css('border', '3px solid #198754');

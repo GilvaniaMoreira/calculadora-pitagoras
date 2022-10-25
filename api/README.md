@@ -29,4 +29,4 @@ A API irá retornar um JSON com os seguites campos:
 | `c` | `float` | Resultado do calculo do 2º cateto |
 | `error` | `string` | Descrição de um erro caso ocorra |
 
-***Só será retorna um campo a cada requisição, correspondendo ao resultado desejado ou o error em caso de falha***
+***Só será retornado um campo a cada requisição, correspondendo ao resultado desejado ou o error em caso de falha***
