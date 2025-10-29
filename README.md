@@ -19,6 +19,6 @@ https://pythagoras-calculator.herokuapp.com/
 
 ## Contatos
 Gilvânia Moreira
-e-mail: moreiragil84@gmail.com
+e-mail: devgilmoreira@gmail.com
 
 
